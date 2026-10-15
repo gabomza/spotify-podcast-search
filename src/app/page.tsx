@@ -100,11 +100,11 @@ export default function Home() {
                 </h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {podcasts.map((podcast) => (
+                {podcasts.map((podcast, index) => (
                   <div
                     key={podcast.id}
                     className="animate-in fade-in zoom-in-95 duration-500 fill-mode-both"
-                    style={{ animationDelay: `${Math.random() * 200}ms` }}
+                    style={{ animationDelay: `${index * 50}ms` }}
                   >
                     <PodcastCard podcast={podcast} />
                   </div>
